@@ -31,6 +31,6 @@ void	myprint(char x, char y, char z)
 	write(1, &x, 1);
 	write(1, &y, 1);
 	write(1, &z, 1);
-	if (x<7)
+	if (x < 7)
 		write(1, ", ", 2);
 }
