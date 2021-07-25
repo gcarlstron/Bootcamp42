@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   print_matrix.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gpacheco <gpacheco@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: arbernar <arbernar@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/24 01:52:18 by arbernar          #+#    #+#             */
-/*   Updated: 2021/07/24 17:40:53 by gpacheco         ###   ########.fr       */
+/*   Updated: 2021/07/25 22:08:24 by arbernar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,3 +33,15 @@ void	print_matrix(int *matrix)
 		i++;
 	}
 }
+/*
+void	matrix_start(int *matrix)
+{
+	int	i;
+
+	i = 0;
+	while (i < 16)
+	{
+		matrix[i] = 0;
+		i++;
+	}
+}*/
