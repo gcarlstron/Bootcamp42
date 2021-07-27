@@ -1,39 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   validate_entry.c                                   :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gpacheco <gpacheco@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/26 00:35:55 by arbernar          #+#    #+#             */
-/*   Updated: 2021/07/26 14:51:15 by gpacheco         ###   ########.fr       */
+/*   Created: 2021/07/26 23:27:06 by gpacheco          #+#    #+#             */
+/*   Updated: 2021/07/26 23:44:54 by gpacheco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include <stdio.h>
-#include "skyscrapper_puzzle.h"
+void ft_div_mod(int a, int b, int *div, int *mod);
 
-int	validate_entry(char *str, int *views)
+int main(void)
 {
-	int	j;
-	int	i;
+	int	div;
+	int	mod;
+	int a;
+	int b;
 
-	i = 0;
-	j = 0;
-	while (str[i] != '\0' && j < 16)
-	{
-		if (str[i] >= '1' && str[i] <= '4')
-		{
-			views[j] = str[i] - '0';
-			j++;
-		}
-		else
-			if (str[i] != ' ')
-				return (1);
-		i++;
-	}
-	if (i != 31 || str[i] != '\0')
-		return (1);
-	return (0);
+	a = 10;
+	b = 2;
+	ft_div_mod(a, b, &div, &mod);
+	printf("%i dividido por %i é igual a %i e sobra %i\n", a, b, div, mod);
 }

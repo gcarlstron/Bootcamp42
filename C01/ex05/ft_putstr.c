@@ -1,39 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   validate_entry.c                                   :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gpacheco <gpacheco@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/26 00:35:55 by arbernar          #+#    #+#             */
-/*   Updated: 2021/07/26 14:51:15 by gpacheco         ###   ########.fr       */
+/*   Created: 2021/07/26 23:46:43 by gpacheco          #+#    #+#             */
+/*   Updated: 2021/07/27 13:17:46 by gpacheco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
-#include "skyscrapper_puzzle.h"
 
-int	validate_entry(char *str, int *views)
+void	ft_putstr(char *str)
 {
-	int	j;
-	int	i;
+char a;
+int i = 0;
+a = 'a';
 
-	i = 0;
-	j = 0;
-	while (str[i] != '\0' && j < 16)
+while (a != '\0')
 	{
-		if (str[i] >= '1' && str[i] <= '4')
-		{
-			views[j] = str[i] - '0';
-			j++;
-		}
-		else
-			if (str[i] != ' ')
-				return (1);
-		i++;
+		a = *str;
+		write (1, &a, 1);
+		str++;
 	}
-	if (i != 31 || str[i] != '\0')
-		return (1);
-	return (0);
 }

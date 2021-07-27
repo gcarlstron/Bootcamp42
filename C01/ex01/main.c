@@ -1,39 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   validate_entry.c                                   :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gpacheco <gpacheco@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/26 00:35:55 by arbernar          #+#    #+#             */
-/*   Updated: 2021/07/26 14:51:15 by gpacheco         ###   ########.fr       */
+/*   Created: 2021/07/26 23:04:51 by gpacheco          #+#    #+#             */
+/*   Updated: 2021/07/27 13:20:21 by gpacheco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include <stdio.h>
-#include "skyscrapper_puzzle.h"
 
-int	validate_entry(char *str, int *views)
+void	ft_ultimate_ft(int *********nbr);
+
+int	main(void)
 {
-	int	j;
-	int	i;
+	int	n1;
+	int	*n2;
+	int	**n3;
+	int	***n4;
+	int	****n5;
+	int	*****n6;
+	int	******n7;
+	int	*******n8;
+	int	********n9;
 
-	i = 0;
-	j = 0;
-	while (str[i] != '\0' && j < 16)
-	{
-		if (str[i] >= '1' && str[i] <= '4')
-		{
-			views[j] = str[i] - '0';
-			j++;
-		}
-		else
-			if (str[i] != ' ')
-				return (1);
-		i++;
-	}
-	if (i != 31 || str[i] != '\0')
-		return (1);
-	return (0);
+	n1 = 0;
+	n2 = &n1;
+	n3 = &n2;
+	n4 = &n3;
+	n5 = &n4;
+	n6 = &n5;
+	n7 = &n6;
+	n8 = &n7;
+	n9 = &n8;
+	printf("n = %i\n", n1);
+	ft_ultimate_ft(&n9);
+	printf("n = %i\n", n1);
 }
