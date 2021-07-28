@@ -6,12 +6,12 @@
 /*   By: gpacheco <gpacheco@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/26 23:24:50 by gpacheco          #+#    #+#             */
-/*   Updated: 2021/07/26 23:26:38 by gpacheco         ###   ########.fr       */
+/*   Updated: 2021/07/27 23:06:04 by gpacheco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_div_mod(int a, int b, int *div, int *mod)
+void	ft_div_mod(int a, int b, int *div, int *mod)
 {
-	*div = a/b;
-	*mod = a%b;
+	*div = a / b;
+	*mod = a % b;
 }

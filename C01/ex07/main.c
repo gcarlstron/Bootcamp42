@@ -5,22 +5,54 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: gpacheco <gpacheco@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/26 23:27:06 by gpacheco          #+#    #+#             */
-/*   Updated: 2021/07/27 23:06:55 by gpacheco         ###   ########.fr       */
+/*   Created: 2021/07/27 18:03:55 by gpacheco          #+#    #+#             */
+/*   Updated: 2021/07/28 00:43:51 by gpacheco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-void	ft_ultimate_div_mod(int *a, int *b);
+
+void	ft_rev_int_tab(int *tab, int size);
+
+void	fill_tab(int *tab, int start, int end)
+{
+	int	i;
+
+	i = 0;
+	while (start <= end)
+	{
+		tab[i] = start;
+		start++;
+		i++;
+	}
+}
+
+void	print_tab(int *tab, int size)
+{
+	int	i;
+
+	i = 0;
+	while (i < size)
+	{
+		printf("%i ", tab1[i]);
+		i++;
+	}
+	printf("\n");
+}
 
 int	main(void)
 {
-	int	a;
-	int	b;
+	int	tab1[8];
+	int	tab2[9];
+	int	i;
 
-	a = 9;
-	b = 2;
-	printf("%i dividido por %i", a, b);
-	ft_ultimate_div_mod(&a, &b);
-	printf(" é igual a %i e sobra %i\n", a, b);
+	fill_tab(tab1, 1, 8);
+	fill_tab(tab2, 1, 9);
+	print_tab(tab1, 8);
+	ft_rev_int_tab(tab1, 8);
+	print_tab(tab1, 8);
+	printf("\n");
+	print_tab(tab2, 9);
+	ft_rev_int_tab(tab2, 9);
+	print_tab(tab2, 9);
 }

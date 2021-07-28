@@ -1,26 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gpacheco <gpacheco@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/26 23:46:43 by gpacheco          #+#    #+#             */
-/*   Updated: 2021/07/27 23:12:20 by gpacheco         ###   ########.fr       */
+/*   Created: 2021/07/27 23:30:24 by gpacheco          #+#    #+#             */
+/*   Updated: 2021/07/28 00:30:36 by gpacheco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdio.h>
 
-void	ft_putstr(char *str)
+void	ft_sort_int_tab(int *tab, int size);
+
+int	main(void)
 {
-	char	a;
+	int	tab[10] = {12, 3, 5, 120, 9, 27, 67, 52, 5, 1};
+	int	i;
 
-	a = 'a';
-	while (a != '\0')
+	i = 0;
+	while (i < 10)
 	{
-		a = *str;
-		write (1, &a, 1);
-		str++;
+		printf("%i ", tab[i]);
+		i++;
 	}
+	printf("\n");
+	i = 0;
+	ft_sort_int_tab(tab, 10);
+	while (i < 10)
+	{
+		printf("%i ", tab[i]);
+		i++;
+	}
+	printf("\n");
 }

@@ -6,7 +6,7 @@
 /*   By: gpacheco <gpacheco@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/27 17:13:38 by gpacheco          #+#    #+#             */
-/*   Updated: 2021/07/27 17:22:50 by gpacheco         ###   ########.fr       */
+/*   Updated: 2021/07/27 23:13:54 by gpacheco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_strlen(char *str);
 
-int main(void)
+int	main(void)
 {
-	printf("len:%i\n",ft_strlen(""));
+	printf("len:%i\n", ft_strlen(""));
 }

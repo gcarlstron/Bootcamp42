@@ -6,13 +6,13 @@
 /*   By: gpacheco <gpacheco@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/26 23:38:05 by gpacheco          #+#    #+#             */
-/*   Updated: 2021/07/26 23:44:12 by gpacheco         ###   ########.fr       */
+/*   Updated: 2021/07/27 23:06:38 by gpacheco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_ultimate_div_mod(int *a, int *b)
+void	ft_ultimate_div_mod(int *a, int *b)
 {
-	int aux;
+	int	aux;
 
 	aux = *a / *b;
 	*b = *a % *b;
