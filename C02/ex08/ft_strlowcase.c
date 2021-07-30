@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gpacheco <gpacheco@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/26 23:46:43 by gpacheco          #+#    #+#             */
-/*   Updated: 2021/07/30 13:11:12 by gpacheco         ###   ########.fr       */
+/*   Created: 2021/07/30 01:23:28 by gpacheco          #+#    #+#             */
+/*   Updated: 2021/07/30 01:28:50 by gpacheco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putstr(char *str)
+char	*ft_strlowcase(char *str)
 {
-	char	a;
+	int i;
 
-	a = *str;
-	while (a != '\0')
+	i = 0;
+	while(str[i] != '\0')
 	{
-		a = *str;
-		write (1, &a, 1);
-		str++;
+		if (str[i] >= 'A' && str[i] <= 'Z')
+			str[i] += 'a'-'A';
+		i++;
 	}
+	return str;
 }
